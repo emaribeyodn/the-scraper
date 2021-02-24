@@ -4,7 +4,7 @@ Scraping articles and associated comments from websites like: Senego, ActuSen, S
 ## Installation
 
 Taper les commandes suivantes
-git clone ...
-cd the-scraper
-python3 -m venv env
-pip install -r requirements.txt
+* git clone ...
+* cd the-scraper
+* python3 -m venv env
+* pip install -r requirements.txt
