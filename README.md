@@ -8,3 +8,4 @@ Taper les commandes suivantes
 * cd the-scraper
 * python3 -m venv env
 * pip install -r requirements.txt
+* scrapy crawl senego
