@@ -13,3 +13,12 @@ class TheScraperItem(Item):
     pub_date = Field()
     author = Field()
     url = Field()
+    video_url = Field()
+    has_video = Field()
+    number_of_comments = Field()
+
+    # TODO ADD COMMENTS FIELD
+
+
+class TrainingSetItem(Item):
+    body = Field()

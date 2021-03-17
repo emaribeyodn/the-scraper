@@ -20,11 +20,14 @@ class TheScraperPipeline:
         self.curr.execute("""DROP TABLE IF EXISTS articles""")
         self.curr.execute(
             """CREATE TABLE articles(
-                url text,
-                author text,
-                pub_date text,
-                title text, 
-                content text
+                url TEXT,
+                author TEXT,
+                pub_date TEXT,
+                title TEXT, 
+                content TEXT,
+                number_of_comments TEXT,
+                has_video TEXT,
+                video_url TEXT
             )"""
         )
 
@@ -34,13 +37,16 @@ class TheScraperPipeline:
 
     def store_article(self, item) -> None:
         self.curr.execute(
-            """INSERT INTO articles values (?,?,?,?,?)""",
+            """INSERT INTO articles values (?,?,?,?,?,?,?,?)""",
             (
                 item["url"],
                 item["author"],
                 item["pub_date"],
                 item["title"],
                 item["content"],
+                item["number_of_comments"],
+                item["has_video"],
+                item["video_url"],
             ),
         )
 

@@ -1,0 +1,9 @@
+{
+  "website": "https://senego.com",
+  "title": "h1.entry-title::text",
+  "content": "div.entry-content",
+  "pub_date": "time.single-post-time::attr(datetime)",
+  "author": "div.author_name::text",
+  "number_of_comments": "div#wpd-threads > div.wpd-thread-head > div.wpd-thread-info > span::text",
+  "video_url": "div.entry-content > p > iframe::attr('src')"
+}

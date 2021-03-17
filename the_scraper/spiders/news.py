@@ -26,4 +26,12 @@ class SenegoSpider(Spider):
         item["author"] = response.css("div.author_name::text").get()
         item["content"] = response.css("div.entry-content").get()
 
+        is_video = response.css("div.entry-content > p > iframe::attr('src')").get()
+        if is_video is not None:
+            item["has_video"] = "True"
+            item["video_url"] = is_video
+        else:
+            item["has_video"] = "False"
+            item["video_url"] = "-"
+
         yield item

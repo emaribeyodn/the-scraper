@@ -1,0 +1,9 @@
+{
+  "website": "https://www.seneweb.com",
+  "title": "div.post_header > h1::text",
+  "content": "div.single_post_content_wrapper",
+  "pub_date": "div.post_header > div.post_meta.single_post_meta > span:nth-child(2)::text",
+  "author": "div.post_header > div.post_meta.single_post_meta > span:nth-child(1) > a > span::text",
+  "number_of_comments": "div.post_comments_wrapper > h2 > span::text",
+  "video_url": "div.single_post_content_wrapper > div.videoWrapper > iframe::attr('src')"
+}
